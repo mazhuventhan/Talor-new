@@ -13,8 +13,8 @@ const SideBar = () => {
                     <div className="text-center mb-3">
                         <img alt="" src="" />
                         <br />
-                        <h4>Admin</h4>
-                        <img src={Logo} alt="logo" />
+                        {/* <h4>Admin</h4> */}
+                        <img src={Logo} alt="logo" style={{width:'100px'}} />
                     </div>
                     <div className="mt-4">
                         <Link to={"/dashboard"} className="link" >

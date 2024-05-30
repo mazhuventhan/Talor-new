@@ -3,7 +3,7 @@ import React from "react";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Logo from '../Images/logo.gif'
-const Login = () => {
+const Register = () => {
     const [showPassword, setShowPassword] = React.useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -26,7 +26,7 @@ const Login = () => {
                                 <form onSubmit={handleSubmit}>
                                     <div className="text-center">
                                         <img src={Logo} alt="logo" style={{ width: '100px' }} />
-                                        <h4 className="mt-3 mb-3">Login</h4>
+                                        <h4 className="mt-3 mb-3">Register</h4>
                                     </div>
                                     <div className="mt-3">
                                         <TextField className="w-100 bg-light rounded" type="text" required id="outlined-basic" label="Enter email" variant="outlined" />
@@ -54,8 +54,30 @@ const Login = () => {
                                             />
                                         </FormControl>
                                     </div>
+                                    <div className="mt-3">
+                                        <FormControl variant="outlined" className="w-100 bg-light rounded">
+                                            <InputLabel htmlFor="outlined-adornment-password"> Password</InputLabel>
+                                            <OutlinedInput
+                                                id="outlined-adornment-password"
+                                                type={showPassword ? 'text' : 'password'}
+                                                endAdornment={
+                                                    <InputAdornment position="end">
+                                                        <IconButton
+                                                            aria-label="toggle password visibility"
+                                                            onClick={handleClickShowPassword}
+                                                            onMouseDown={handleMouseDownPassword}
+                                                            edge="end"
+                                                        >
+                                                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                                                        </IconButton>
+                                                    </InputAdornment>
+                                                }
+                                                label="Confirm Password"
+                                                required
+                                            />
+                                        </FormControl>
+                                    </div>
                                     <Button type="submit" className="w-100 mt-3" variant="contained" style={{ textTransform: 'none',backgroundColor:'#27babfc2',height:'50px' }}>Submit</Button>
-                                    <p>New user?<a className="text-white" style={{textDecoration:'none'}} href="/register">Register here.</a></p>
                                 </form>
                             </CardContent>
 
@@ -67,4 +89,4 @@ const Login = () => {
         </>
     )
 }
-export default Login;
+export default Register;

@@ -6,12 +6,14 @@ import Login from './pages/Login';
 import Banners from './pages/banners';
 import AddBanner from './pages/newBanner';
 import ChatBox from './chatbot/chatBot';
+import Register from './pages/register';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Login/>} />  
+        <Route exact path="/register" element={<Register/>} />  
         <Route exact path="dashboard" element={<Dashboard/>} />  
         <Route exact path="banners" element={<Banners/>} /> 
         <Route exact path="newbanner" element={<AddBanner/>} />

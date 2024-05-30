@@ -4,6 +4,9 @@ body{
 .mob-btn {
     display: none !important;
 }
+input{
+    height: 20px !important;
+}
 
 .offcanvas-header {
     justify-content: end !important;
