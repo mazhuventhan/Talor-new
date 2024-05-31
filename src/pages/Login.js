@@ -3,6 +3,8 @@ import React from "react";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Logo from '../Images/logo.gif'
+import darkLogo from '../Images/app_dark_logo.png';
+
 const Login = () => {
     const [showPassword, setShowPassword] = React.useState(false);
 
@@ -17,15 +19,15 @@ const Login = () => {
     }
     return (
         <>
-            <div className="bg-light" style={{ height: '100vh', overflow: 'hidden' }}>
+           <div style={{ height: '100vh', overflow: 'hidden',backgroundColor:'#081D3E' }}>
                 <div className="row">
                     <div className="col-lg-4"></div>
                     <div className="col-lg-4 col-12 align-center" style={{ height: '100vh' }}>
-                        <Card elevation={5} className="p-3 w-100" style={{ backgroundColor: '#01011a', color: 'white' }}>
+                        <Card elevation={5} className="p-3 w-100" style={{borderRadius:'16px'}}>
                             <CardContent >
                                 <form onSubmit={handleSubmit}>
                                     <div className="text-center">
-                                        <img src={Logo} alt="logo" style={{ width: '100px' }} />
+                                        <img src={darkLogo} alt="logo" style={{ width: '100px' }} />
                                         <h4 className="mt-3 mb-3">Login</h4>
                                     </div>
                                     <div className="mt-3">
@@ -54,11 +56,10 @@ const Login = () => {
                                             />
                                         </FormControl>
                                     </div>
-                                    <Button type="submit" className="w-100 mt-3" variant="contained" style={{ textTransform: 'none',backgroundColor:'#27babfc2',height:'50px' }}>Submit</Button>
-                                    <p>New user?<a className="text-white" style={{textDecoration:'none'}} href="/register">Register here.</a></p>
+                                    <Button type="submit" className="w-100 mt-3" variant="contained" style={{ textTransform: 'none',backgroundColor:'#52B5E6',height:'50px' }}>Submit</Button>
+                                    <p>New user?<a className="text-dark" style={{textDecoration:'none'}} href="/register">Register here.</a></p>
                                 </form>
                             </CardContent>
-
                         </Card>
                     </div>
                     <div className="col-lg-4"></div>

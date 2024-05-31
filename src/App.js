@@ -7,12 +7,14 @@ import Banners from './pages/banners';
 import AddBanner from './pages/newBanner';
 import ChatBox from './chatbot/chatBot';
 import Register from './pages/register';
+import Splash from './pages/splash';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Login/>} />  
+      <Route exact path="/" element={<Splash />} /> 
+        <Route exact path="/login" element={<Login/>} />  
         <Route exact path="/register" element={<Register/>} />  
         <Route exact path="dashboard" element={<Dashboard/>} />  
         <Route exact path="banners" element={<Banners/>} /> 
