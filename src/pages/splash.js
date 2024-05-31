@@ -3,8 +3,6 @@ import React from "react";
 import Logo from '../Images/logo.gif';
 import welcomeLogo from '../Images/ic_welcome_img.png';
 import darkLogo from '../Images/app_dark_logo.png';
-
-
 const Splash = () => {
 
     return (
@@ -19,8 +17,8 @@ const Splash = () => {
                                     <img src={darkLogo} alt="logo" style={{ width: '100px' }} /><br />
                                     <img src={welcomeLogo} alt="logo" style={{ width: '200px' }} />
                                 </div>
-                                <Button className="w-100 mt-3" variant="contained" style={{ textTransform: 'none', backgroundColor: '#52B5E6', height: '50px' }}>Login</Button>
-                                <Button className="w-100 mt-3" variant="outlined" style={{ textTransform: 'none', height: '50px',backgroundColor:"white" }}>Sign Up</Button>
+                                <Button onClick={()=>window.location.replace('/login')} className="w-100 mt-3" variant="contained" style={{ textTransform: 'none', backgroundColor: '#52B5E6', height: '50px' }}>Login</Button>
+                                <Button onClick={()=>window.location.replace('/register')} className="w-100 mt-3" variant="outlined" style={{ textTransform: 'none', height: '50px',backgroundColor:"white" }}>Sign Up</Button>
                             </CardContent>
                         </Card>
                     </div>
